@@ -11,11 +11,11 @@ import (
 
 var client = &http.Client{Timeout: 10 * time.Second}
 
-// NewHTTPRequest function builds http call
+// Request function builds http call
 // @param method <string>: http method
 // @param url <string>: URL http to call
 // @return <string>, error
-func NewHTTPRequest(method string, url string, bodyString string, header map[string]string) (int, string, error) {
+func Request(method string, url string, bodyString string, header map[string]string) (int, string, error) {
 
 	switch method {
 	case "GET":
